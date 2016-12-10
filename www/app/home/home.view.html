@@ -1,5 +1,32 @@
-<ion-view cache-view="false" view-title="Home">
+<ion-view view-title="Roteiro">
   <ion-content>
+    <main>
+
+      <header class="user-information--home">
+        <div class="row">
+          <div class="col col">
+            <figure class="banner--home">
+              <img ng-src="{{ ::vm.data.user.farm.banner.src }}" ng-alt="Banner - {{ ::vm.data.user.farm.farmName }}">
+            </figure>
+            <div class="dt-complete--home">Data do preenchimento do guia: 10/03/1996</div>
+            <hgroup>
+              <h1>{{ ::vm.data.user.fullName }}</h1>
+              <h4>{{ ::vm.data.user.farm.farmName }}</h4>
+          </hgroup>
+          </div>
+        </div>
+      </header>
+
+      <section class="roadmap-section--home">
+        <article class="roadmap-article--home" ng-repeat="report in vm.data.user.reports.performance">
+          <h3 class="roadmap-title--home">{{ ::report.title }}</h3>
+          <p>{{ ::report.data }}</p>
+        </article>
+      </section>
+
+      <pre>{{vm}}</pre>
+      
+    </main>
 
   </ion-content>
 </ion-view>

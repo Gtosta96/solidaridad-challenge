@@ -8,6 +8,7 @@
 	  'test.menu.controller',
 		'test.home.controller',
 	  
+		'test.mock.service',
 	  'test.storage.service'
 	]);
 
