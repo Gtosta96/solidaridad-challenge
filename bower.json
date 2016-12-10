@@ -3,5 +3,12 @@
   "private": "true",
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.3.2"
+  },
+  "resolutions": {
+    "angular": "1.5.3"
+  },
+  "dependencies": {
+    "v-accordion": "^1.6.0",
+    "angular-chart.js": "^1.1.1"
   }
 }

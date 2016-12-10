@@ -1,7 +1,9 @@
+@import '_variables.scss';
+
 .user-information--home {
 	text-align: center;
 		.dt-complete--home {
-			text-align:right;
+			text-align: right;
 		}
 }
 
@@ -10,5 +12,13 @@
 		img {
 			height: 200px;
 			width: 100%;
+		}
+}
+
+.table-pros-cons--home {
+	width: 100%;
+	margin: 10px 0 10px 0;
+		thead {
+			background-color: $default-gray;	
 		}
 }

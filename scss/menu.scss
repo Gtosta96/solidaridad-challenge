@@ -1,0 +1,11 @@
+@import '_variables.scss';
+
+.menu-box--menu {
+	> header {
+		background-color: $default-lightgreen;
+	}
+}
+
+.menu-title--menu {
+	color: $default-white;
+}

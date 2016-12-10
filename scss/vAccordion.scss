@@ -1,0 +1,8 @@
+@import '_variables.scss';
+
+// $v-pane-border-color:               $default-darkblue !default;
+$v-pane-expanded-border-color:      $default-yellow !default;
+$v-pane-icon-color:                 $default-black !default;
+$v-pane-hover-color:                $default-black !default;
+
+@import '../www/lib/v-accordion/src/vAccordion/styles/vAccordion.scss';

@@ -9,10 +9,13 @@
   <link rel="manifest" href="manifest.json">
 
   <link href="css/ionic.app.css" rel="stylesheet">
+  
+  <!--application css-->
   <link href="css/menu.css" rel="stylesheet">
   <link href="css/home.css" rel="stylesheet">
-  
-  <link href="css/style.css" rel="stylesheet">
+
+  <link href="css/vAccordion.css" rel="stylesheet">
+
 </head>
 
 <body ng-app="test">
@@ -24,13 +27,23 @@
   <!-- cordova script (this will be a 404 during development) -->
   <script src="cordova.js"></script>
 
+  <!--third part (plugins) -->
+  <script src="lib/v-accordion/dist/v-accordion.js"></script>
+  
+  <script src="lib/chart.js/dist/Chart.js"></script>
+  <script src="lib/angular-chart.js/dist/angular-chart.js"></script>
+
+  <!--core modules-->
   <script src="app/app.js"></script>
+  <script src="app/app.config.js"></script>
   <script src="app/app.run.js"></script>
   <script src="app/app.routes.js"></script>
   
+  <!--controllers-->
   <script src="app/menu/menu.controller.js"></script>
   <script src="app/home/home.controller.js"></script>
 
+  <!--services-->
   <script src="app/shared/mock/mock.service.js"></script>
   <script src="app/shared/storage/storage.service.js"></script>
 

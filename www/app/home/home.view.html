@@ -8,7 +8,7 @@
             <figure class="banner--home">
               <img ng-src="{{ ::vm.data.user.farm.banner.src }}" ng-alt="Banner - {{ ::vm.data.user.farm.farmName }}">
             </figure>
-            <div class="dt-complete--home">Data do preenchimento do guia: 10/03/1996</div>
+            <div class="dt-complete--home">Data do preenchimento do guia: 05/12/2016</div>
             <hgroup>
               <h1>{{ ::vm.data.user.fullName }}</h1>
               <h4>{{ ::vm.data.user.farm.farmName }}</h4>
@@ -17,16 +17,63 @@
         </div>
       </header>
 
-      <section class="roadmap-section--home">
-        <article class="roadmap-article--home" ng-repeat="report in vm.data.user.reports.performance">
-          <h3 class="roadmap-title--home">{{ ::report.title }}</h3>
-          <p>{{ ::report.data }}</p>
-        </article>
+      <section class="roadmap-section--home padding">
+        <v-accordion class="vAccordion--default">
+          <v-pane ng-repeat="pane in vm.data.user.reports" class="roadmap-block--home">
+            <v-pane-header>
+              <h4 class="roadmap-title--home">{{ ::pane.title }}</h4>        
+            </v-pane-header>
+            <v-pane-content>
+
+              <p>{{ ::pane.description }}</p>
+
+              <v-accordion ng-if="pane.data">
+                <v-pane ng-repeat="subpane in pane.data">
+                  <v-pane-header>
+                    {{ ::subpane.title }}
+                  </v-pane-header>
+                  <v-pane-content>
+
+                    <p>{{ ::subpane.content.description }}</p>
+
+                    <canvas class="chart chart-bar"
+                      chart-data="subpane.chart.data" chart-labels="subpane.chart.labels" chart-series="subpane.chart.series"> 
+                    </canvas>
+
+                    <table class="table-pros-cons--home">
+                      <thead>
+                        <th>Pontos Fortes</th>
+                        <th>Pontos Fracos</th>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="prosCons in subpane.prosCons">
+                          <td>{{ ::prosCons[$index] }}</td>
+                          <td>{{ ::prosCons[$index] }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="row">
+                      <div class="col col-50">
+                        <button class="button button-full button-outline button-positive">
+                          Nível Geral: 3
+                        </button>
+                      </div>
+                      <div class="col col-50">
+                        <button class="button button-full button-positive">
+                          Vá para Dicas
+                        </button>
+                      </div>
+                    </div>
+
+                  </v-pane-content>
+                </v-pane>
+              </v-accordion>
+            </v-pane-content>
+          </v-pane>
+        </v-accordion>       
       </section>
 
-      <pre>{{vm}}</pre>
-      
     </main>
-
   </ion-content>
 </ion-view>
