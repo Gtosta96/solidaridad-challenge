@@ -15,10 +15,11 @@
 		}
 }
 
-.table-pros-cons--home {
+.table {
 	width: 100%;
 	margin: 10px 0 10px 0;
-		thead {
-			background-color: $default-gray;	
-		}
+	border: 1px solid $default-gray;
+	thead {
+		background-color: $default-gray;
+	}
 }

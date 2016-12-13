@@ -9,8 +9,9 @@
     height: 200px;
     width: 100%; }
 
-.table-pros-cons--home {
+.table {
   width: 100%;
-  margin: 10px 0 10px 0; }
-  .table-pros-cons--home thead {
+  margin: 10px 0 10px 0;
+  border: 1px solid #DDD; }
+  .table thead {
     background-color: #DDD; }
